@@ -1,15 +1,5 @@
 #include "libft.h"
 
-static int	ft_strlenc(char const *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*res;
@@ -17,7 +7,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
-	len = ft_strlenc(s);
+	len = ft_strlen(s);
 	res = (char *)malloc(len + 1);
 	while (s[i])
 	{

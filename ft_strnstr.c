@@ -1,15 +1,5 @@
 #include "libft.h"
 
-static int	ft_strlenc(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
 char	*ft_strnstr(const char *haystack, const char *needle, int n)
 {
 	int	i;
@@ -18,7 +8,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, int n)
 
 	i = 0;
 	j = 0;
-	st_len = ft_strlenc(needle);
+	st_len = ft_strlen(needle);
 	if (needle[i] == '\0' || needle == haystack)
 		return ((char *)(haystack));
 	if (!haystack && !n)
