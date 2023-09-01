@@ -13,6 +13,8 @@ char	*ft_strrchr(const char *s, int c)
 			count = i;
 		i++;
 	}
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
 	if (count == -1)
 		return 0;
 	else

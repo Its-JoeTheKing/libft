@@ -1,5 +1,16 @@
 #include "libft.h"
 
+static char	**free_array(char **ptr, int i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(ptr[i]);
+	}
+	free(ptr);
+	return (0);
+}
+
 static int	count_words(char const *str, char c)
 {
 	int	i;
@@ -62,6 +73,7 @@ char **ft_split(char const *s, char c)
 	i = 0;
 	wd_co = 0;
 	res = (char **)malloc(sizeof(char *) * len);
+	free_array(res, len);
 	if (!res)
 		return (0);
 	while (s[i])

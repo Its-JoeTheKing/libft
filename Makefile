@@ -10,7 +10,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 OBJS = ${SRCS:.c=.o}
 NAME = libft.a
 LIBC = ar rcs
-CC = cc
+CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
