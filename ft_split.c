@@ -73,9 +73,8 @@ char **ft_split(char const *s, char c)
 	i = 0;
 	wd_co = 0;
 	res = (char **)malloc(sizeof(char *) * len);
-	free_array(res, len);
 	if (!res)
-		return (0);
+		return free_array(res, len);
 	while (s[i])
 	{
 		while (s[i] == c)

@@ -3,8 +3,8 @@
 char	*ft_substr(char const *s, unsigned int start, int len)
 {
 	char	*new;
-	int	slen;
-	int	finish;
+	int		slen;
+	int		finish;
 
 	if (!s)
 		return (0);
